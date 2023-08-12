@@ -1,0 +1,220 @@
+body {
+    background-image: none;
+    /* color: #333; */
+    margin-top: 50px;
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.parallax {
+    background-image: url('../image/contact_2.jpg');
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.parallax_text {
+    padding-top: 40vh;
+    font-size: 100px;
+    display: inline-block;
+    font-weight: 800;
+    color: white;
+    /* text-shadow: #ffffff 0px 0px 3px; */
+    animation: mylight 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes mylight {
+    from {
+        text-shadow: none;
+    }
+
+    to {
+        text-shadow: #000000 0px 0px 3px;
+    }
+}
+
+.parallax>div {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 70px;
+    border: 8px solid #ffffffa4;
+}
+
+/* 跑馬燈 */
+div.myItem>p {
+    /* height: 150px; */
+    /* margin-bottom: 3px; */
+    font-size: 50px;
+    font-weight: 800;
+}
+
+div.item_1,
+div.item_2 {
+    height: 80px;
+    background-image: linear-gradient(to top, rgb(75, 119, 75), white, transparent);
+    animation: none;
+    background-attachment: fixed;
+}
+
+
+.item_1>p {
+    text-align: end;
+    animation: scroll 20s linear infinite alternate;
+    color: rgb(255, 255, 255);
+    text-shadow: #333 0px 0px 3px;
+}
+
+.item_2>p {
+    text-align: end;
+    text-shadow: #ffffff 0px 0px 3px;
+    animation: scroll2 15s linear infinite alternate;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes scroll2 {
+    from {
+        transform: translateX(-100%)
+    }
+
+    to {
+        transform: translateX(0)
+    }
+}
+
+.item_3 {
+    background-image: url('../image/contact_1.jpg');
+    min-height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    padding-left: 30px;
+    text-align: center;
+    color: white;
+    text-shadow: #000000 0px 0px 2px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+h2 {
+    padding: 10px;
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #333;
+    text-align: center;
+}
+
+/* form */
+.item_5 {
+    position: absolute;
+    right: 18%;
+    width: 350px;
+    background-color: transparent;
+    /* border: rgb(133, 133, 133) 3px solid; */
+    color: rgb(0, 0, 0);
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 20px;
+    margin: 50px;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.623);
+    border-radius: 20px;
+    box-shadow: #383838 0px 0px 5px;
+    transition: all 0.5s linear;
+}
+
+.item_5:hover {
+    background-color: rgba(255, 255, 255, 0.849);
+    box-shadow: #383838 0px 0px 10px;
+    transform: scale(102%, 102%);
+    transition: all 1s ease;
+}
+
+.form-control:invalid+label::before {
+    content: "！";
+    color: red;
+}
+
+.item_6 {
+    padding-left: 30px;
+    color: white;
+    text-shadow: #333 1px 1px 1px;
+    font-size: 20px;
+    font-weight: 300;
+    position: relative;
+    top: 350px;
+}
+
+.item_6:nth-of-type(3)>a {
+    text-decoration: underline;
+    color: white;
+}
+
+@media screen and (max-width:700px) {
+
+    div.item_1,
+    div.item_2 {
+        height: 60px;
+    }
+
+    .item_6 {
+        display: block;
+        position: relative;
+        top: 600px;
+        color: rgb(0, 0, 0);
+        text-shadow: none;
+        line-height: 15px;
+    }
+
+    .item_6:nth-of-type(3)>a {
+        text-decoration: underline;
+        color: rgb(0, 0, 0);
+        padding-bottom: 20px;
+    }
+
+    .parallax_text {
+        font-size: 80px;
+        padding-top: 25vh;
+    }
+
+    div.myItem>p {
+        font-size: 30px;
+    }
+
+    .item_3 {
+        background-position: 75%;
+    }
+
+    .parallax {
+        min-height: 550px;
+    }
+
+    .item_5 {
+        margin-right: -15%;
+    }
+}

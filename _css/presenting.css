@@ -1,0 +1,63 @@
+button[class*=carousel-control]:hover {
+    background-color: #69696928;
+    border-radius: 5px;
+}
+
+.r_item2,
+.r_item3,
+.r_item4 {
+    display: none;
+}
+
+.btn {
+    border: none;
+}
+
+.itemtext {
+    background-color: #b3b3b370;
+    box-shadow: #333 1px 1px 3px;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-left: 3%;
+}
+
+.itemurl {
+    transform: translate(-30px, -50px);
+    z-index: 1;
+}
+
+.itemurl .animate__fadeInBottomRight {
+    background-color: none;
+    transition: all 0.5s linear;
+}
+
+.itemurl:hover .animate__fadeInBottomRight {
+    padding: 25px;
+    background-color: #333;
+    border-radius: 50%;
+    color: white;
+    transition: all 1s ease;
+}
+
+@media screen and (max-width:766px) {
+    .main_f {
+        display: flex;
+    }
+
+    .btn {
+        display: inline-flex;
+        margin-left: 5px;
+        justify-content: center;
+        /* border: #000000 1px solid; */
+    }
+
+    .itemtext {
+        width: 35%;
+        align-content: center;
+    }
+
+    .container {
+        margin-bottom: 0;
+    }
+}

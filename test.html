@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDGs小學堂</title>
+    <link rel="stylesheet" href="./_css/bootstrap.css">
+    <script src="./_js/bootstrap.bundle.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./_css/style.css">
+    <link rel="stylesheet" href="./_css/test.css">
+    <link rel="icon" href="../SDGs/icon/SDG_logo_without_UN_emblem/SDG Wheel_Transparent_WEB.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <div class="container_nav">
+        <div class="topnav" id="myTopnav">
+            <a href="./index.html" class="active"><i class="fa-solid fa-house"></i></a>
+            <a href="./about.html">關於SDGs</a>
+            <a href="./case.html">各種行動</a>
+            <a href="./presenting.html">多元呈現</a>
+            <a href="./contact.html">聯絡我們</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <script>
+            /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+        </script>
+    </div>
+    <!-- 問題列 -->
+    <div class="container">
+        <div class="title text-center">
+            <h1 class="pt-3 my-3 animate__animated animate__backInDown">SDGs小學堂</h1>
+            <h6 class="animate__animated animate__fadeInUp">〃每道題目有四個敘述，請點選正確的敘述</h6>
+            <h6 class="animate__animated animate__fadeInUp">〃答題後點選右方按鈕看說明</h6>
+            <hr>
+        </div>
+        <!-- 問題1 -->
+        <div class="test_1 row gap-1 py-3">
+            <img src="./icon/SDG-Icons-2019_WEB/E-WEB-Goal-03.png" alt="" class="mx-auto col-12 col-md-2 sdgsicon animate__animated animate__backInUp">
+            <div class="test_1_text mx-auto col-12 col-md-6 row gap-1">
+                <input type="checkbox" id="op1_1"><label for="op1_1"
+                    class="wrong1 rounded focus col-12 py-2 animate__animated animate__backInUp">全球過半數人有基本健康照顧</label></input>
+                <input type="checkbox" id="op1_2"><label for="op1_2"
+                    class="right1 rounded focus col-12 py-2 animate__animated animate__backInUp">新冠肺炎對衛生領域有重大影響</label></input>
+                <input type="checkbox" id="op1_3"><label for="op1_3"
+                    class="right1 rounded focus col-12 py-2 animate__animated animate__backInUp">提升各年齡層人們的福祉</label></input>
+                <input type="checkbox" id="op1_4"><label for="op1_4"
+                    class="right1 rounded focus col-12 py-2 animate__animated animate__backInUp">確保孩童有接種疫苗的權利</label></input>
+            </div>
+            <div class="text_1_btn col-12 col-md-2 gap-1 row mx-auto me-4">
+                <a class="btn col-5 col-md-12 ansbtn btn-danger py-3 animate__animated animate__backInUp" onclick="check1()">答案</a>
+                <a class="btn col-5 col-md-12 ansbtn btn-secondary py-3 animate__animated animate__backInUp" onclick="reset1()">重來</a>
+            </div>
+            <script>
+                function check1() {
+                    // wrong
+
+                    // document.querySelector('.wrong').style.background = 'red';
+                    // document.querySelector('.wrong').style.color = 'white';
+                    document.querySelector('.wrong1').style.border = 'red 3px solid';
+                    document.querySelector('.wrong1').innerHTML = '全球過半數人<span style="text-decoration:line-through">有</span><span style="color:red">沒有</span>基本健康照顧';
+
+                    // right
+                    var x = document.querySelectorAll('.right1');
+                    for (i = 0; i < x.length; i++) {
+                        // x[i].style.color = 'white';
+                        x[i].style.border = 'green 3px solid';
+                    }
+                }
+                function reset1() {
+                    document.querySelector('.wrong1').innerHTML = '全球過半數人有基本健康照顧';
+                    var x = document.querySelectorAll('label[for*=op1]');
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.border = 'none';
+                    }
+                }
+            </script>
+        </div>
+        <hr>
+        <!-- 問題2 -->
+        <div class="test_2 row gap-1 py-3">
+            <img src="./icon/SDG-Icons-2019_WEB/E-WEB-Goal-04.png" alt="" class="mx-auto col-12 col-md-2 sdgsicon animate__animated animate__backInUp">
+            <div class="test_2_text mx-auto col-12 col-md-6 row gap-1">
+                <input type="checkbox" id="op2_1"><label for="op2_1"
+                    class="right2 rounded focus col-12 py-2 animate__animated animate__backInUp">教育權應納入城鄉差距考量</label></input>
+                <input type="checkbox" id="op2_2"><label for="op2_2"
+                    class="right2 rounded focus col-12 py-2 animate__animated animate__backInUp">新冠肺炎加劇了教育不平等</label></input>
+                <input type="checkbox" id="op2_3"><label for="op2_3"
+                    class="right2 rounded focus col-12 py-2 animate__animated animate__backInUp">全民都應終身有學習機會</label></input>
+                <input type="checkbox" id="op2_4"><label for="op2_4"
+                    class="wrong2 rounded focus col-12 py-2 animate__animated animate__backInUp">超過七成小學有基本洗手設備</label></input>
+            </div>
+            <div class="text_2_btn col-12 col-md-2 gap-1 row mx-auto me-4">
+                <a class="btn col-5 col-md-12 ansbtn btn-danger py-3 animate__animated animate__backInUp" onclick="check2()">答案</a>
+                <a class="btn col-5 col-md-12 ansbtn btn-secondary py-3 animate__animated animate__backInUp" onclick="reset2()">重來</a>
+            </div>
+            <script>
+                function check2() {
+                    // wrong
+
+                    // document.querySelector('.wrong').style.background = 'red';
+                    // document.querySelector('.wrong').style.color = 'white';
+                    document.querySelector('.wrong2').style.border = 'red 3px solid';
+                    document.querySelector('.wrong2').innerHTML = '<span style="text-decoration:line-through">超過七成</span><span style="color:red">只有65%</span>的小學有基本洗手設備';
+
+                    // right
+                    var x = document.querySelectorAll('.right2');
+                    for (i = 0; i < x.length; i++) {
+                        // x[i].style.color = 'white';
+                        x[i].style.border = 'green 3px solid';
+                    }
+                }
+                function reset2() {
+                    document.querySelector('.wrong2').innerHTML = '超過七成小學有基本洗手設備';
+                    var x = document.querySelectorAll('label[for*=op2]');
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.border = 'none';
+
+                    }
+                }
+            </script>
+        </div>
+        <hr>
+        <!-- 問題3 -->
+        <div class="test_3 row gap-1 py-3">
+            <img src="./icon/SDG-Icons-2019_WEB/E-WEB-Goal-08.png" alt="" class="mx-auto col-12 col-md-2 sdgsicon animate__animated animate__backInUp">
+            <div class="test_3_text mx-auto col-12 col-md-6 row gap-1">
+                <input type="checkbox" id="op3_1"><label for="op3_1"
+                    class="wrong3 wrong3_1 rounded focus col-12 py-2 animate__animated animate__backInUp">創造足夠的就業機會不能消滅貧窮</label></input>
+                <input type="checkbox" id="op3_2"><label for="op3_2"
+                    class="wrong3 wrong3_2 rounded focus col-12 py-2 animate__animated animate__backInUp">全球旅遊業持續蓬勃發展</label></input>
+                <input type="checkbox" id="op3_3"><label for="op3_3"
+                    class="right3 rounded focus col-12 py-2 animate__animated animate__backInUp">綠色經濟是經濟成長的重要指標</label></input>
+                <input type="checkbox" id="op3_4"><label for="op3_4"
+                    class="right3 rounded focus col-12 py-2 animate__animated animate__backInUp">新冠肺炎損失了相當於4億個的工作機會</label></input>
+            </div>
+            <div class="text_3_btn col-12 col-md-2 gap-1 row mx-auto me-4">
+                <a class="btn col-5 col-md-12 ansbtn btn-danger py-3 animate__animated animate__backInUp" onclick="check3()">答案</a>
+                <a class="btn col-5 col-md-12 ansbtn btn-secondary py-3 animate__animated animate__backInUp" onclick="reset3()">重來</a>
+            </div>
+            <script>
+                function check3() {
+                    // wrong
+
+                    var x = document.querySelectorAll('.wrong3');
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.border = 'red 3px solid';
+                    }
+                    document.querySelectorAll('.wrong3')[0].innerHTML = '創造足夠的就業機會<span style="text-decoration:line-through">不能</span><span style="color:red">可以</span>消滅貧窮';
+                    document.querySelectorAll('.wrong3')[1].innerHTML = '全球旅遊業<span style="text-decoration:line-through">持續蓬勃發展</span><span style="color:red">正面臨前所未有的挑戰</span>';
+
+                    // right
+                    var y = document.querySelectorAll('.right3');
+                    for (i = 0; i < y.length; i++) {
+                        y[i].style.border = 'green 3px solid';
+                    }
+                }
+                function reset3() {
+                    document.querySelectorAll('.wrong3')[0].innerHTML = '創造足夠的就業機會不能消滅貧窮';
+                    document.querySelectorAll('.wrong3')[1].innerHTML = '全球旅遊業持續蓬勃發展';
+                    var x = document.querySelectorAll('label[for*=op3]');
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.border = 'none';
+                    }
+                }
+            </script>
+        </div>
+        <hr>
+        <!-- 問題4 -->
+        <div class="test_4 row gap-1 py-3">
+            <img src="./icon/SDG-Icons-2019_WEB/E-WEB-Goal-12.png" alt="" class="mx-auto col-12 col-md-2 sdgsicon animate__animated animate__backInUp">
+            <div class="test_4_text mx-auto col-12 col-md-6 row gap-1">
+                <input type="checkbox" id="op4_1"><label for="op4_1"
+                    class="wrong4 rounded focus col-12 py-2 animate__animated animate__backInUp">化石燃料補貼有助於降低氣候變遷</label></input>
+                <input type="checkbox" id="op4_2"><label for="op4_2"
+                    class="right4 rounded focus col-12 py-2 animate__animated animate__backInUp">確保可持續性的生產和消費模式</label></input>
+                <input type="checkbox" id="op4_3"><label for="op4_3"
+                    class="right4 rounded focus col-12 py-2 animate__animated animate__backInUp">我們應致力於降低碳足跡</label></input>
+                <input type="checkbox" id="op4_4"><label for="op4_4"
+                    class="right4 rounded focus col-12 py-2 animate__animated animate__backInUp">近14%的糧食耗損在供應鏈上</label></input>
+            </div>
+            <div class="text_4_btn col-12 col-md-2 gap-1 row mx-auto me-4">
+                <a class="btn col-5 col-md-12 ansbtn btn-danger py-3 animate__animated animate__backInUp" onclick="check4()">答案</a>
+                <a class="btn col-5 col-md-12 ansbtn btn-secondary py-3 animate__animated animate__backInUp" onclick="reset4()">重來</a>
+            </div>
+            <script>
+                function check4() {
+                    // wrong
+
+                    document.querySelector('.wrong4').style.border = 'red 3px solid';
+                    document.querySelector('.wrong4').innerHTML = '化石燃料補貼<span style="text-decoration:line-through">有</span><span style="color:red">無</span>助於降低氣候變遷';
+
+                    // right
+                    var x = document.querySelectorAll('.right4');
+                    for (i = 0; i < x.length; i++) {
+                        // x[i].style.color = 'white';
+                        x[i].style.border = 'green 3px solid';
+                    }
+                }
+                function reset4() {
+                    document.querySelector('.wrong4').innerHTML = '化石燃料補貼有助於降低氣候變遷';
+                    var x = document.querySelectorAll('label[for*=op4]');
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.border = 'none';
+                    }
+                }
+            </script>
+        </div>
+        <hr>
+        <!-- 問題5 -->
+        <div class="test_5 row gap-1 py-3">
+            <img src="./icon/SDG-Icons-2019_WEB/E-WEB-Goal-15.png" alt="" class="mx-auto col-12 col-md-2 sdgsicon animate__animated animate__backInUp">
+            <div class="test_5_text mx-auto col-12 col-md-6 row gap-1">
+                <input type="checkbox" id="op5_1"><label for="op5_1"
+                    class="right5 rounded focus col-12 py-2 animate__animated animate__backInUp">全球僅1/3國家有機會將生物多樣性納入國家規劃</label></input>
+                <input type="checkbox" id="op5_2"><label for="op5_2"
+                    class="wrong5 wrong5_1 rounded focus col-12 py-2 animate__animated animate__backInUp">野生動物販運有助於增加生物多樣性</label></input>
+                <input type="checkbox" id="op5_3"><label for="op5_3"
+                    class="right5 rounded focus col-12 py-2 animate__animated animate__backInUp">物種滅絕會加劇氣候變化</label></input>
+                <input type="checkbox" id="op5_4"><label for="op5_4"
+                    class="wrong5 wrong5_2 rounded focus col-12 py-2 animate__animated animate__backInUp">農業擴張不會影響森林面積</label></input>
+            </div>
+            <div class="text_5_btn col-12 col-md-2 gap-1 row mx-auto me-4">
+                <a class="btn col-5 col-md-12 ansbtn btn-danger py-3 animate__animated animate__backInUp" onclick="check5()">答案</a>
+                <a class="btn col-5 col-md-12 ansbtn btn-secondary py-3 animate__animated animate__backInUp" onclick="reset5()">重來</a>
+            </div>
+            <script>
+                function check5() {
+                    // wrong
+
+                    var x = document.querySelectorAll('.wrong5');
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.border = 'red 3px solid';
+                    }
+                    document.querySelectorAll('.wrong5')[0].innerHTML = '野生動物販運<span style="text-decoration:line-through">有</span><span style="color:red">無</span>助於增加生物多樣性';
+                    document.querySelectorAll('.wrong5')[1].innerHTML = '農業擴張<span style="text-decoration:line-through">不會</span><span style="color:red">嚴重</span>影響森林面積';
+
+                    // right
+                    var y = document.querySelectorAll('.right5');
+                    for (i = 0; i < y.length; i++) {
+                        y[i].style.border = 'green 3px solid';
+                    }
+                }
+                function reset5() {
+                    document.querySelectorAll('.wrong5')[0].innerHTML = '野生動物販運有助於生物多樣性';
+                    document.querySelectorAll('.wrong5')[1].innerHTML = '農業擴張不會影響森林面積';
+                    var x = document.querySelectorAll('label[for*=op5]');
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.border = 'none';
+                    }
+                }
+            </script>
+        </div>
+    </div>
+    <br>
+    <br>
+
+</body>
+
+</html>

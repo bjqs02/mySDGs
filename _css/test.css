@@ -1,0 +1,86 @@
+.sdgsicon {
+    width: 25%;
+    object-fit: contain;
+    border-radius: 10%;
+}
+
+.ansbtn {
+    /* width: 100px; */
+    /* height: 100px; */
+    text-align: center;
+    align-self: center;
+    /* line-height: 80px; */
+    margin-left: 20px;
+}
+
+
+input {
+    position: fixed;
+    visibility: hidden;
+}
+
+input:checked+label.focus {
+    /* border: 3px solid black; */
+    background-color: lightgray;
+}
+
+label:hover {
+    background-color: rgba(211, 211, 211, 0.457);
+}
+
+label {
+    text-align: center;
+    align-self: center;
+}
+
+div.title>h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #FFFFFF;
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+div.title>h6:nth-of-type(1) {
+    animation-delay: 1.0s;
+}
+
+div.title>h6:nth-of-type(2) {
+    animation-delay: 1.3s;
+}
+
+.btn{
+    border-radius: 10px;
+    box-shadow: 4px 5px #999;
+}
+
+.btn:active {
+    box-shadow: 1px 3px #666;
+    transform: translateY(2px);
+}
+
+
+@media screen and (max-width:768px) {
+    .sdgsicon {
+        width: 50%;
+
+    }
+}
+
+.animate__backInUp:nth-of-type(1){
+    animation-delay: 2.0s;
+}
+.animate__backInUp:nth-of-type(2){
+    animation-delay: 2.2s;
+}
+.animate__backInUp:nth-of-type(3){
+    animation-delay: 2.4s;
+}
+.animate__backInUp:nth-of-type(4){
+    animation-delay: 2.6s;
+}
+.animate__backInUp:nth-of-type(5){
+    animation-delay: 2.8s;
+}
+.animate__backInUp:nth-of-type(6){
+    animation-delay: 3.0s;
+}
